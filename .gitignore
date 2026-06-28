@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # =============================================
 #  AgriConnect AI – Root .gitignore
 #  Covers: frontend (React/Vite) + backend (FastAPI/Python)
@@ -42,11 +43,16 @@ frontend/.vite/
 
 # ── Logs ─────────────────────────────────────
 logs/
+=======
+# Logs
+logs
+>>>>>>> 818113b908e82fbcd642d479ec970076fc07ec4c
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
+<<<<<<< HEAD
 
 # ── Editor & OS files ─────────────────────────
 .vscode/*
@@ -54,12 +60,29 @@ pnpm-debug.log*
 .idea/
 .DS_Store
 Thumbs.db
+=======
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+>>>>>>> 818113b908e82fbcd642d479ec970076fc07ec4c
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+<<<<<<< HEAD
 
 # ── Misc ──────────────────────────────────────
 *.bak
 *.tmp
+=======
+>>>>>>> 818113b908e82fbcd642d479ec970076fc07ec4c
