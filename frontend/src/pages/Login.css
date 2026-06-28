@@ -1,0 +1,22 @@
+/* Login.css – page-specific extras */
+
+.login-extras {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.login-forgot {
+  font-size: 13.5px;
+  color: #2f7d32;
+  font-weight: 700;
+  text-decoration: none;
+  transition: text-decoration 0.15s;
+}
+
+.login-forgot:hover {
+  text-decoration: underline;
+}

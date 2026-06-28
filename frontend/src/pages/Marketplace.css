@@ -1,0 +1,366 @@
+/* =========================================================
+   Marketplace.css  –  Marketplace listing page styles
+   ========================================================= */
+
+/* ——— Page shell ——— */
+.mp-page {
+  min-height: 100vh;
+  background: #f6faf4;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #183526;
+}
+
+/* ——— Hero banner ——— */
+.mp-hero {
+  background: linear-gradient(135deg, #173b24 0%, #2f7d32 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 60px 28px 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mp-hero-inner {
+  max-width: 700px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.mp-hero-decoration {
+  position: absolute;
+  right: 8%;
+  bottom: -20px;
+  font-size: 160px;
+  opacity: 0.08;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+}
+
+.mp-eyebrow {
+  margin: 0 0 12px;
+  color: #a8d65d;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.mp-title {
+  margin: 0 0 16px;
+  color: #ffffff;
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.08;
+}
+
+.mp-title span {
+  color: #a8d65d;
+}
+
+.mp-subtitle {
+  margin: 0;
+  color: #b2d6b6;
+  font-size: 17px;
+  line-height: 1.65;
+}
+
+/* ——— Main content area ——— */
+.mp-main {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 36px 28px 80px;
+}
+
+/* ——— Filters ——— */
+.mp-filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 14px;
+  background: #ffffff;
+  border: 1px solid #dfeadd;
+  border-radius: 18px;
+  padding: 20px 24px;
+  box-shadow: 0 4px 20px rgba(23, 59, 36, 0.06);
+  margin-bottom: 28px;
+}
+
+/* Search */
+.mp-search-wrap {
+  position: relative;
+  flex: 1;
+  min-width: 220px;
+}
+
+.mp-search-icon {
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 15px;
+  pointer-events: none;
+}
+
+.mp-search {
+  width: 100%;
+  padding: 11px 14px 11px 40px;
+  border: 1.5px solid #c8d9ca;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #183526;
+  background: #f8fbf7;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.mp-search:focus {
+  border-color: #2f7d32;
+  box-shadow: 0 0 0 3px rgba(47, 125, 50, 0.1);
+}
+
+.mp-search::placeholder {
+  color: #9ab89d;
+}
+
+/* Remove default search cancel button in webkit */
+.mp-search::-webkit-search-cancel-button {
+  appearance: none;
+}
+
+/* Select wrapper */
+.mp-select-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 150px;
+}
+
+.mp-select-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #4d9154;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.mp-select {
+  padding: 10px 32px 10px 12px;
+  border: 1.5px solid #c8d9ca;
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #183526;
+  background: #f8fbf7
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%232f7d32' d='M0 0l6 8 6-8z'/%3E%3C/svg%3E")
+    no-repeat right 12px center;
+  appearance: none;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s;
+}
+
+.mp-select:focus {
+  border-color: #2f7d32;
+  box-shadow: 0 0 0 3px rgba(47, 125, 50, 0.1);
+}
+
+/* Clear filters button */
+.mp-clear-btn {
+  padding: 10px 16px;
+  border: 1.5px solid #e57373;
+  border-radius: 10px;
+  background: #fff5f5;
+  color: #c62828;
+  font-size: 13px;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  align-self: flex-end;
+  transition: background 0.18s, border-color 0.18s;
+  white-space: nowrap;
+}
+
+.mp-clear-btn:hover {
+  background: #ffebee;
+}
+
+/* ——— Results bar ——— */
+.mp-results-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.mp-results-count {
+  margin: 0;
+  color: #617468;
+  font-size: 14px;
+}
+
+.mp-results-count strong {
+  color: #173b24;
+}
+
+.mp-filter-tag {
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: #e8f5e9;
+  color: #2f7d32;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+/* ——— Listings grid ——— */
+.mp-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 24px;
+  margin-bottom: 60px;
+}
+
+/* ——— Empty state ——— */
+.mp-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px;
+  margin-bottom: 60px;
+}
+
+.mp-empty-icon {
+  font-size: 72px;
+  margin-bottom: 20px;
+  animation: sway 3s ease-in-out infinite;
+}
+
+@keyframes sway {
+  0%, 100% { transform: rotate(-5deg); }
+  50%       { transform: rotate(5deg); }
+}
+
+.mp-empty-title {
+  margin: 0 0 12px;
+  color: #173b24;
+  font-size: 24px;
+}
+
+.mp-empty-desc {
+  margin: 0 0 28px;
+  color: #617468;
+  font-size: 16px;
+  line-height: 1.65;
+  max-width: 420px;
+}
+
+.mp-empty-btn {
+  padding: 13px 28px;
+  border: none;
+  border-radius: 10px;
+  background: #2f7d32;
+  color: white;
+  font-weight: 800;
+  font-size: 15px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.mp-empty-btn:hover {
+  background: #236426;
+}
+
+/* ——— Bottom CTA ——— */
+.mp-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  padding: 44px 48px;
+  border-radius: 24px;
+  background: #173b24;
+  flex-wrap: wrap;
+}
+
+.mp-cta h2 {
+  margin: 8px 0 12px;
+  color: #ffffff;
+  font-size: clamp(22px, 3vw, 32px);
+  letter-spacing: -0.5px;
+}
+
+.mp-cta > div > p:last-child {
+  margin: 0;
+  color: #cae0ce;
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 560px;
+}
+
+.mp-cta-btn {
+  flex-shrink: 0;
+  padding: 15px 28px;
+  border: none;
+  border-radius: 12px;
+  background: #a8d65d;
+  color: #173b24;
+  font-size: 15px;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background 0.18s;
+  white-space: nowrap;
+}
+
+.mp-cta-btn:hover {
+  background: #c0e77e;
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 900px) {
+  .mp-filters {
+    flex-direction: column;
+  }
+
+  .mp-search-wrap,
+  .mp-select-wrap {
+    width: 100%;
+  }
+
+  .mp-clear-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .mp-cta {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 32px 28px;
+  }
+
+  .mp-cta-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 520px) {
+  .mp-hero {
+    padding: 48px 18px 44px;
+  }
+
+  .mp-main {
+    padding: 24px 18px 60px;
+  }
+
+  .mp-grid {
+    grid-template-columns: 1fr;
+  }
+}
