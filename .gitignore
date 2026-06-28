@@ -13,6 +13,9 @@
 # Only .env.example files should be committed
 !.env.example
 
+# ── ChromaDB / Vector store (auto-generated, can be large) ───
+backend/vector_store/
+
 # ── Python / Backend ─────────────────────────
 backend/venv/
 backend/__pycache__/
