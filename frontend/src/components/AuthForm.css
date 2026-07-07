@@ -1,0 +1,318 @@
+/* =========================================================
+   AuthForm.css  –  Shared form styles for Login & Signup
+   ========================================================= */
+
+/* ——— Form card wrapper ——— */
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+}
+
+.auth-card-title {
+  margin: 0 0 6px;
+  color: #173b24;
+  font-size: clamp(22px, 3vw, 28px);
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.auth-card-sub {
+  margin: 0 0 32px;
+  color: #617468;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* ——— Field group ——— */
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.auth-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #2e4d38;
+  letter-spacing: 0.2px;
+}
+
+.auth-label span {
+  color: #c62828;
+  margin-left: 2px;
+}
+
+/* ——— Input base ——— */
+.auth-input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #c8d9ca;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #183526;
+  background: #f8fbf7;
+  outline: none;
+  transition: border-color 0.18s, box-shadow 0.18s, background 0.18s;
+  box-sizing: border-box;
+}
+
+.auth-input:focus {
+  border-color: #2f7d32;
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(47, 125, 50, 0.1);
+}
+
+.auth-input.input-error {
+  border-color: #e53935;
+  background: #fff8f8;
+}
+
+.auth-input.input-error:focus {
+  box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.1);
+}
+
+/* ——— Password input wrapper (for show/hide icon) ——— */
+.auth-pw-wrap {
+  position: relative;
+}
+
+.auth-pw-wrap .auth-input {
+  padding-right: 46px;
+}
+
+.auth-pw-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  color: #617468;
+  padding: 0;
+  line-height: 1;
+  transition: color 0.15s;
+}
+
+.auth-pw-toggle:hover {
+  color: #2f7d32;
+}
+
+/* ——— Inline error message ——— */
+.auth-error-msg {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #c62828;
+  font-size: 12.5px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+/* ——— Select ——— */
+.auth-select {
+  width: 100%;
+  padding: 12px 36px 12px 14px;
+  border: 1.5px solid #c8d9ca;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: inherit;
+  color: #183526;
+  background: #f8fbf7
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%232f7d32' d='M0 0l6 8 6-8z'/%3E%3C/svg%3E")
+    no-repeat right 12px center;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 0.18s, box-shadow 0.18s;
+  box-sizing: border-box;
+}
+
+.auth-select:focus {
+  border-color: #2f7d32;
+  background-color: #fff;
+  box-shadow: 0 0 0 3px rgba(47, 125, 50, 0.1);
+}
+
+.auth-select.input-error {
+  border-color: #e53935;
+}
+
+/* ——— Two-column row ——— */
+.auth-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* ——— Checkbox row ——— */
+.auth-check-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.auth-check-row input[type="checkbox"] {
+  width: 17px;
+  height: 17px;
+  accent-color: #2f7d32;
+  cursor: pointer;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.auth-check-label {
+  font-size: 13.5px;
+  color: #526a59;
+  line-height: 1.5;
+}
+
+.auth-check-label a {
+  color: #2f7d32;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-check-label a:hover {
+  text-decoration: underline;
+}
+
+/* ——— Submit button ——— */
+.auth-submit-btn {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #2f7d32;
+  color: white;
+  font-size: 16px;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  letter-spacing: 0.2px;
+  box-shadow: 0 8px 24px rgba(47, 125, 50, 0.22);
+  transition: background 0.18s, transform 0.12s, box-shadow 0.18s;
+  margin-bottom: 22px;
+}
+
+.auth-submit-btn:hover {
+  background: #236426;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 28px rgba(47, 125, 50, 0.28);
+}
+
+.auth-submit-btn:active {
+  transform: translateY(0);
+}
+
+.auth-submit-btn:disabled {
+  background: #8ab88c;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* ——— Divider ——— */
+.auth-divider {
+  text-align: center;
+  color: #9ab89d;
+  font-size: 13px;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.auth-divider::before,
+.auth-divider::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 38%;
+  height: 1px;
+  background: #dfeadd;
+}
+
+.auth-divider::before { left: 0; }
+.auth-divider::after  { right: 0; }
+
+/* ——— Footer link row ——— */
+.auth-footer-text {
+  text-align: center;
+  font-size: 14px;
+  color: #617468;
+  margin: 0;
+}
+
+.auth-footer-text a {
+  color: #2f7d32;
+  font-weight: 800;
+  text-decoration: none;
+  margin-left: 4px;
+}
+
+.auth-footer-text a:hover {
+  text-decoration: underline;
+}
+
+/* ——— Success toast ——— */
+.auth-success-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #e8f5e9;
+  border: 1.5px solid #a5d6a7;
+  border-radius: 12px;
+  padding: 16px 18px;
+  margin-bottom: 24px;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.auth-success-icon {
+  font-size: 22px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.auth-success-box p {
+  margin: 0;
+  color: #1b5e20;
+  font-size: 14px;
+  line-height: 1.55;
+}
+
+.auth-success-box strong {
+  display: block;
+  font-size: 15px;
+  margin-bottom: 3px;
+}
+
+/* ——— Form-level error banner ——— */
+.auth-form-error {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #fff3f3;
+  border: 1.5px solid #ffcdd2;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  color: #c62828;
+  font-size: 13.5px;
+  font-weight: 600;
+  animation: slideDown 0.25s ease;
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 520px) {
+  .auth-row {
+    grid-template-columns: 1fr;
+  }
+}

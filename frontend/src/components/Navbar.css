@@ -1,0 +1,159 @@
+/* =========================================================
+   Navbar.css  –  Shared navigation bar styles
+   ========================================================= */
+
+.navbar {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 22px 28px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #173b24;
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.logo-mark {
+  font-size: 26px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  color: #4e6656;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.nav-links a:hover,
+.nav-links a.nav-active {
+  color: #2f7d32;
+}
+
+.nav-links a.nav-active {
+  font-weight: 800;
+  border-bottom: 2px solid #2f7d32;
+  padding-bottom: 2px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* User display styling */
+.user-email-display {
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #173b24;
+  background: #edf7e9;
+  padding: 6px 12px;
+  border-radius: 20px;
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Cart badge pill styling */
+.nav-cart-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 18px;
+  background: #fff;
+  border: 1px solid #c8d9ca;
+  padding: 6px 12px;
+  border-radius: 20px;
+  margin-right: 4px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cart-count-pill {
+  font-size: 11px;
+  font-weight: 800;
+  background: #2f7d32;
+  color: #fff;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Remove underlines from Link wrappers around nav buttons */
+.nav-actions a {
+  text-decoration: none;
+}
+
+/* Shared button base styles also used by other pages */
+.login-btn,
+.secondary-btn {
+  border: 1px solid #c8d9ca;
+  background: white;
+  color: #245c2d;
+  border-radius: 9px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font: inherit;
+  transition: border-color 0.18s, background 0.18s;
+}
+
+.primary-btn {
+  border: none;
+  background: #2f7d32;
+  color: white;
+  border-radius: 9px;
+  padding: 11px 16px;
+  cursor: pointer;
+  font-weight: 700;
+  font: inherit;
+  box-shadow: 0 8px 18px rgba(47, 125, 50, 0.18);
+  transition: background 0.18s;
+}
+
+.primary-btn:hover {
+  background: #236426;
+}
+
+.secondary-btn:hover,
+.login-btn:hover {
+  border-color: #2f7d32;
+  background: #f1f8f1;
+}
+
+/* ——— Responsive ——— */
+@media (max-width: 850px) {
+  .nav-links {
+    display: none;
+  }
+}
+
+@media (max-width: 520px) {
+  .navbar {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+
+  .nav-actions .login-btn {
+    display: none;
+  }
+}

@@ -1,0 +1,35 @@
+# Environment secrets
+.env
+**/.env
+!.env.example
+
+# Python
+venv/
+**/venv/
+__pycache__/
+*.py[cod]
+
+# Node
+node_modules/
+**/node_modules/
+dist/
+**/dist/
+
+# Local RAG data and caches
+backend/vector_store/
+vector_store/
+.huggingface/
+*.sqlite3
+
+# Temporary diagnostics / test outputs
+backend/diagnostics_results.json
+backend/test_results.json
+backend/run_chat_test.py
+backend/list_models.py
+backend/diagnostics.py
+
+# OS / editor files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,36 @@
+/* Signup.css – page-specific extras */
+
+/* Wider card to fit two-column rows comfortably */
+.signup-card {
+  max-width: 520px;
+}
+
+/* Password strength bar */
+.pw-strength {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 7px;
+}
+
+.pw-strength-bar-bg {
+  flex: 1;
+  height: 5px;
+  border-radius: 20px;
+  background: #dfeadd;
+  overflow: hidden;
+}
+
+.pw-strength-bar-fill {
+  height: 100%;
+  border-radius: 20px;
+  transition: width 0.35s ease, background 0.35s ease;
+}
+
+.pw-strength-label {
+  font-size: 12px;
+  font-weight: 800;
+  min-width: 46px;
+  text-align: right;
+  letter-spacing: 0.2px;
+}

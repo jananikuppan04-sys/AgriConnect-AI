@@ -1,0 +1,187 @@
+/* =========================================================
+   AuthLayout.css  –  Two-column auth page shell
+   ========================================================= */
+
+/* ——— Page shell ——— */
+.auth-page {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6faf4;
+}
+
+/* ====================================================
+   LEFT PANEL – branded green section
+   ==================================================== */
+.auth-panel {
+  position: relative;
+  background: linear-gradient(160deg, #173b24 0%, #2a6b30 55%, #3a8f3e 100%);
+  display: flex;
+  flex-direction: column;
+  padding: 36px 48px 48px;
+  overflow: hidden;
+  color: white;
+}
+
+/* Logo */
+.auth-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.3px;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-logo-icon {
+  font-size: 28px;
+}
+
+/* Body copy */
+.auth-panel-body {
+  margin-top: auto;
+  padding-bottom: 32px;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-panel-eyebrow {
+  margin: 0 0 14px;
+  color: #a8d65d;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+}
+
+.auth-panel-heading {
+  margin: 0 0 18px;
+  color: #ffffff;
+  font-size: clamp(28px, 3.5vw, 44px);
+  line-height: 1.12;
+  letter-spacing: -1px;
+  font-weight: 800;
+}
+
+.auth-panel-heading span {
+  color: #a8d65d;
+}
+
+.auth-panel-sub {
+  margin: 0 0 36px;
+  color: #b2d6b6;
+  font-size: 15px;
+  line-height: 1.7;
+  max-width: 380px;
+}
+
+/* Benefits list */
+.auth-benefits {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.auth-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #ddeedd;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.auth-benefit-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: rgba(168, 214, 93, 0.18);
+  font-size: 19px;
+  flex-shrink: 0;
+}
+
+/* Decorative floating plants */
+.auth-panel-deco {
+  position: absolute;
+  bottom: -24px;
+  right: -20px;
+  font-size: 180px;
+  opacity: 0.07;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  z-index: 0;
+}
+
+.auth-panel-deco2 {
+  position: absolute;
+  top: 120px;
+  right: 40px;
+  font-size: 80px;
+  opacity: 0.06;
+  pointer-events: none;
+  user-select: none;
+  line-height: 1;
+  z-index: 0;
+}
+
+/* ====================================================
+   RIGHT PANEL – form area
+   ==================================================== */
+.auth-form-panel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 40px;
+  overflow-y: auto;
+}
+
+/* ====================================================
+   Responsive
+   ==================================================== */
+@media (max-width: 900px) {
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+
+  .auth-panel {
+    padding: 28px 28px 36px;
+    min-height: auto;
+  }
+
+  .auth-panel-body {
+    margin-top: 32px;
+  }
+
+  .auth-panel-heading {
+    font-size: 28px;
+  }
+
+  .auth-panel-deco {
+    font-size: 120px;
+  }
+
+  .auth-form-panel {
+    padding: 36px 24px 48px;
+  }
+}
+
+@media (max-width: 520px) {
+  .auth-panel {
+    padding: 22px 20px 28px;
+  }
+
+  .auth-form-panel {
+    padding: 28px 18px 40px;
+  }
+}

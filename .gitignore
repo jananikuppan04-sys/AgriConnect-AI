@@ -1,0 +1,27 @@
+# ── Secrets ──────────────────────────────────────
+.env
+
+# ── Python ──────────────────────────────────────
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# ── Node ────────────────────────────────────────
+node_modules/
+dist/
+
+# ── Data / caches ───────────────────────────────
+vector_store/
+*.log
+
+# ── OS / editor ─────────────────────────────────
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
